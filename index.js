@@ -1,18 +1,14 @@
-let a = 7
+// Step 1
+let numbers = [];
 
-function factorial(number){
-   let arr = Array.from(Array(number+1).keys())
-   let c = arr.slice(1,).reduce((a, b)=> a*b )
-   return c
+// Step 2
+let count = prompt("How many numbers do you want to add?");
+
+// Step 3
+for (let i = 0; i < count; i++) {
+  let num = prompt(`Enter number ${i + 1}:`);
+  numbers.push(Number(num)); 
 }
 
-
-function facFor(number){
-    let fac = 1;
-    for (let index = 1; index <= number; index++) {
-        fac = fac * index
-    }
-    return fac
-}
-console.log(factorial(a))
-console.log(facFor(a))
+// Step 4
+console.log("Your numbers are:", numbers);
