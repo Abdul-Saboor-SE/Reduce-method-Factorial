@@ -1,14 +1,15 @@
-// Step 1
-let numbers = [];
+console.log("Script.js initializing")
+// let boxes = document.getElementsByClassName("box")
+let boxes = document.querySelector(".container").children 
 
-// Step 2
-let count = prompt("How many numbers do you want to add?");
 
-// Step 3
-for (let i = 0; i < count; i++) {
-  let num = prompt(`Enter number ${i + 1}:`);
-  numbers.push(Number(num)); 
+function getRandomColor(){
+    let val1 = Math.ceil(0 + Math.random()* 255);
+    let val2 = Math.ceil(0 + Math.random()* 255);
+    let val3 = Math.ceil(0 + Math.random()* 255);
+    return `rgb(${val1}, ${val2}, ${val3})`
 }
-
-// Step 4
-console.log("Your numbers are:", numbers);
+Array.from(boxes).forEach(e=>{
+    e.style.backgroundColor = getRandomColor()
+    e.style.color = getRandomColor()
+})
